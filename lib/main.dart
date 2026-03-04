@@ -37,7 +37,6 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  // statement buat mengurangi nilai counter ketika tombol decrement ditekan
   void _decrementCounter() {
     setState(() {
       _counter--;
@@ -55,6 +54,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Text(
+              'Afeyla Ansaria Quinn',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const Text('NRP 3124521055', style: TextStyle(fontSize: 16)),
+            const SizedBox(height: 20),
             const Text('You have pushed the button this many times:'),
             Text(
               '$_counter',
