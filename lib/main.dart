@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
+
   final String title;
 
   @override
@@ -36,6 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  // statement buat mengurangi nilai counter ketika tombol decrement ditekan
   void _decrementCounter() {
     setState(() {
       _counter--;
@@ -53,21 +55,16 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              'Afeyla Ansaria Quinn',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
-            const Text(
-              '3124521055',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16),
+            const Text('You have pushed the button this many times:'),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
         ),
       ),
       floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisSize: MainAxisSize.min,
         children: [
           FloatingActionButton(
             onPressed: _decrementCounter,
